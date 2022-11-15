@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="style.css">
+    <title>Animated Smoke Text with CSS & Vanilla Javascript</title>
+</head>
+<body>
+    <section>
+        <p class="text"> Tomar BEIMAN  </p>
+
+    </section>
+    <script>
+        // now, split text into letters (START)
+        const text = document.querySelector('.text')
+        text.innerHTML = text.textContent.replace(/\S/g,
+        "<span>$&</span>");
+        
+       // hasib
+       const letters = document.querySelectorAll('span');
+       for (let i=0; i<letters.length; i++){
+        letters[i].addEventListener("mouseover", function
+        (){
+            letters[i].classList.add('active')
+        })
+       }
+       
+
+    </script>
+</body>
+</html>
